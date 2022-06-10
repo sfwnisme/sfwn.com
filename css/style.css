@@ -1,0 +1,314 @@
+@font-face {
+  src: url(../font/Ubuntu/Ubuntu-Light.ttf);
+  font-family: ubuntu;
+  font-weight: 200;
+}
+
+@font-face {
+  src: url(../font/Ubuntu/Ubuntu-Regular.ttf);
+  font-family: ubuntu;
+  font-weight: 400;
+}
+@font-face {
+  src: url(../font/ubuntu/Ubuntu-Medium.ttf);
+  font-family: ubuntu;
+  font-weight: 600;
+}
+@font-face {
+  src: url(../font/Ubuntu/Ubuntu-Bold.ttf);
+  font-family: ubuntu;
+  font-weight: 800;
+}
+/* titles font */
+@font-face {
+  src: url(/font/tall/DeliriumNcv-Vm5e.ttf);
+  font-family: delirium;
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+::selection {
+  background-color: #f6083834;
+}
+:root {
+  --bg-color: #252528;
+  --icon-box-color: #1c1c20;
+  --box-color: #2c2c2c4f;
+  --identity-color: #f60838;
+  --padding: 60px;
+}
+/* Start Componants */
+.cont {
+  padding-inline-start: 15px;
+  padding-inline-end: 15px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+/* s padding exept .land:) */
+.sec {
+  padding-block-start: 50px;
+  padding-block-end: 50px;
+}
+/* End Componants */
+
+/*--------Start @medias----------*/
+/* Small Screens */
+@media (min-width: 768px) {
+  .cont {
+    width: 750px;
+  }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+  .cont {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .cont {
+    width: 1150px;
+  }
+}
+/*--------End @medias----------*/
+body {
+  font-family: ubuntu;
+  background-color: var(--bg-color);
+}
+/* -----------------End Layout----------------- */
+.about {
+  height: 100vh;
+}
+
+/* Start Land */
+
+.land {
+  /* block-size: 10vh; */
+  padding-block-start: var(--padding);
+  padding-block-end: var(--padding);
+}
+@media (max-width: 991px) {
+  .land {
+    padding-block-end: 60px;
+  }
+}
+.land .cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+@media (max-width: 767px) {
+  .land .cont {
+    flex-flow: wrap column-reverse;
+  }
+}
+.land .cont .box:first-child {
+  flex: 1;
+}
+@media (max-width: 767px) {
+  .land .cont .box:first-child {
+    text-align: center;
+  }
+}
+.land .cont .box .text-box {
+  color: white;
+}
+.land .cont .box .text-box h1 {
+  font-size: 60px;
+  margin-block-end: 10px;
+}
+@media (max-width: 991px) {
+  .land .cont .box .text-box h1 {
+    font-size: 50px;
+  }
+}
+.land .cont .box .text-box h1 span {
+  position: relative;
+}
+.land .cont .box .text-box h1 span::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: calc(100% - 10px);
+  height: calc(100% - 50px);
+  background-color: var(--identity-color);
+  z-index: -1;
+}
+.land .cont .box .text-box h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-block-end: 30px;
+}
+@media (max-width: 991px) {
+  .land .cont .box .text-box h3 {
+    font-size: 20px;
+  }
+}
+.land .cont .box .text-box p {
+  /* font-size: 15px; */
+  font-weight: 200;
+  line-height: 1.8;
+  /* margin-block-end: 30px; */
+}
+@media (max-width: 991px) {
+  .land .cont .box .text-box p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+.land .cont .box .text-box .contact-btn {
+  display: inline-block;
+  color: white;
+  background-color: var(--identity-color);
+  padding-inline: 30px;
+  padding-block: 10px;
+  margin-block-start: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.land .cont .box:last-child {
+  position: relative;
+}
+.land .cont .box:last-child::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--icon-box-color);
+  inline-size: calc(100% - 50px);
+  block-size: calc(100% - 150px);
+  z-index: -1;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.land .cont .box:last-child img {
+  height: 580px;
+}
+@media (max-width: 991px) {
+  .land .cont .box:last-child img {
+    height: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .land .cont .box:last-child img {
+    /* height: 350px; */
+  }
+}
+/* End Land */
+/*Start Header*/
+header {
+  background-color: #212123;
+  z-index: 909999;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  position: fixed;
+  left: 50%;
+  top: 30px;
+  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+  -moz-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  -o-transform: translatex(-50%);
+}
+@media (max-width: 767px) {
+  header {
+    top: 10px;
+  }
+}
+header .cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: fit-content;
+  padding-inline: 10px;
+  padding-block: 10px;
+}
+@media (max-width: 767px) {
+  header .cont {
+    padding-inline: 10px;
+    padding-block: 10px;
+  }
+}
+header .cont .logo img {
+  inline-size: 30px;
+  block-size: auto;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+header .cont .logo img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/*End Header*/
+
+/* start what I do  */
+
+/* end what I do  */
+
+/* start second pages */
+
+.contact {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.contact .cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .contact .cont {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .contact .cont div {
+    flex-basis: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    box-shadow: 0 0 10px;
+  }
+}
+i {
+  color: white;
+  font-size: 200px;
+}
+@media (max-width: 767px) {
+  .contact .cont div i {
+    font-size: 100px;
+    /* box-shadow: 0 0 20px; */
+  }
+}
+/* end second pages */
