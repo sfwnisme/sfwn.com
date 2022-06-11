@@ -40,6 +40,7 @@
   --box-color: #2c2c2c4f;
   --identity-color: #f60838;
   --padding: 60px;
+  --tran1: 0.2s;
 }
 /* Start Componants */
 .cont {
@@ -206,11 +207,6 @@ body {
     height: 500px;
   }
 }
-@media (max-width: 767px) {
-  .land .cont .box:last-child img {
-    /* height: 350px; */
-  }
-}
 /* End Land */
 /*Start Header*/
 header {
@@ -250,7 +246,7 @@ header .cont {
   }
 }
 header .cont .logo img {
-  inline-size: 30px;
+  inline-size: 40px;
   block-size: auto;
   transition: 0.2s;
   -webkit-transition: 0.2s;
@@ -273,42 +269,46 @@ header .cont .logo img:hover {
 /* end what I do  */
 
 /* start second pages */
-
 .contact {
-  height: 100vh;
-  display: grid;
-  place-content: center;
-}
-.contact .cont {
+  block-size: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 @media (max-width: 767px) {
-  .contact .cont {
+  .contact {
     flex-wrap: wrap;
+    align-items: initial;
   }
 }
 @media (max-width: 767px) {
-  .contact .cont div {
-    flex-basis: 50%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .contact a {
     /* background-color: black; */
-    box-shadow: 0 0 10px;
+    flex-basis: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 3px var(--identity-color);
   }
 }
-i {
+.contact a i {
   color: white;
   font-size: 200px;
+  transition: var(--tran1);
+  -webkit-transition: var(--tran1);
+  -moz-transition: var(--tran1);
+  -ms-transition: var(--tran1);
+  -o-transition: var(--tran1);
+}
+.contact a:hover i {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
 }
 @media (max-width: 767px) {
-  .contact .cont div i {
+  .contact a i {
     font-size: 100px;
-    /* box-shadow: 0 0 20px; */
   }
 }
 /* end second pages */
