@@ -321,7 +321,7 @@ header .cont .logo img:hover {
 
 /* start second pages */
 .contact {
-  block-size: 100vh;
+  max-block-size: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
