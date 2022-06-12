@@ -278,6 +278,11 @@ header .cont .logo img:hover {
   font-size: 55px;
   margin-block-start: 10px;
 }
+@media (max-width: 767px) {
+  .wid .cont .title h1 {
+  font-size: 45px;
+  }
+}
 .wid .cont .box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
