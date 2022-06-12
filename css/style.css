@@ -198,6 +198,7 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  box-shadow: 0 0 20px var(--icon-box-color);
 }
 .land .cont .box:last-child img {
   height: 580px;
@@ -265,7 +266,52 @@ header .cont .logo img:hover {
 /*End Header*/
 
 /* start what I do  */
+.wid {
+  padding-block: var(--padding);
+}
+.wid .cont .title h5 {
+  color: var(--identity-color);
+  font-weight: 400;
+}
+.wid .cont .title h1 {
+  color: white;
+  font-size: 55px;
+  margin-block-start: 10px;
+}
+.wid .cont .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.wid .cont .box .info {
+  background-color: #29292c;
+  padding-inline: 30px;
+  padding-block: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 20px var(--icon-box-color);
+}
 
+.wid .cont .box .info svg {
+  color: var(--identity-color);
+  font-size: 50px;
+  /* padding-block-end: 15px; */
+}
+.wid .cont .box .info .text-box {
+  color: white;
+}
+.wid .cont .box .info .text-box h2 {
+  font-weight: 400;
+  padding-block: 20px;
+}
+.wid .cont .box .info .text-box p {
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 1.6;
+}
 /* end what I do  */
 
 /* start second pages */
