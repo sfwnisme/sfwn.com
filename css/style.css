@@ -39,6 +39,12 @@ body {
 }
 :root {
   --bg-color: #252528;
+  --bg-color-gradiant: linear-gradient(
+    345deg,
+    var(--bg-color) 0,
+    var(--bg-color) 30%,
+    var(--icon-box-color)
+  );
   --icon-box-color: #1c1c20;
   --box-color: #2c2c2c4f;
   --identity-color: #f60838;
@@ -46,6 +52,8 @@ body {
   --shadow: #232326;
   --padding: 60px;
   --tran1: 0.2s;
+  --box-color-1: #1c1c201c;
+  --box-color-2: #2c2c2c4f;
 }
 /* Start Componants */
 .cont {
@@ -117,14 +125,13 @@ body {
 
 body {
   font-family: ubuntu;
-  background-color: var(--bg-color);
+  background-image: var(--bg-color-gradiant);
 }
 /* -----------------End Layout----------------- */
 
 /* Start Land */
 
 .land {
-  /* block-size: 10vh; */
   padding-block-start: var(--padding);
   padding-block-end: var(--padding);
 }
@@ -347,7 +354,7 @@ header .cont .logo img:hover {
   gap: 30px;
 }
 .wid .cont .box .info {
-  background-color: #29292c;
+  /* background-color: var(--identity-color); */
   padding-inline: 30px;
   padding-block: 30px;
   border-radius: 10px;
@@ -355,10 +362,11 @@ header .cont .logo img:hover {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  box-shadow: 0 0 120px inset var(--icon-box-color);
+  /* box-shadow: 0 0 120px inset var(--icon-box-color); */
   position: relative;
   overflow: hidden;
   z-index: 1;
+  /* border: 1px solid var(--identity-color); */
 }
 
 .wid .cont .box .info i {
@@ -372,11 +380,17 @@ header .cont .logo img:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-color);
+  /* background-color: #343233; */
+  background-image: linear-gradient(
+    -60deg,
+    var(--box-color-1) 0,
+    var(--box-color-1) 50%,
+    var(--box-color-2) 100%
+  );
+  width: 70px;
+  height: 70px;
+  margin: 20px;
   border-radius: 10px;
-  /* z-index: -1; */
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -386,11 +400,12 @@ header .cont .logo img:hover {
   -moz-transition: var(--tran1);
   -ms-transition: var(--tran1);
   -o-transition: var(--tran1);
+  z-index: -1;
 }
 .wid .cont .box .info:hover::before {
-  width: 70px;
-  height: 70px;
-  margin: 20px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 .wid .cont .box .info .text-box {
   color: white;
